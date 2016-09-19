@@ -1,0 +1,28 @@
+/* Цвета */
+$color1 : rgba(140, 140, 140, 1);
+$color2 : rgba(48, 48, 48, 1);
+$color3 : rgba(66, 65, 64, 1);
+$color4 : rgba(246, 178, 33, 1);
+$color5 : rgba(255, 255, 255, 1);
+$color6 : rgba(128, 128, 128, 1);
+
+$shadow-color : rgba(0, 0, 0, .2);
+$color-gstart : rgba(248, 190, 67, 1);
+$color-gend   : rgba(216, 154, 21, 1);
+$color-bd     : rgba(232, 232, 232, 1);
+$color-bd1    : rgba(238, 238, 238, 1);
+
+/* Шрифт  */
+$font-light   : "RobotoCondensedLight", sans-serif;
+$font-bold    : "RobotoCondensedBold", sans-serif;
+$font-medium  : "RobotoMedium", sans-serif;
+$font-light-r : "RobotoLight", sans-serif;
+$font-thin    : "RobotoThin", sans-serif;
+$font-a       : "lobsterRegular", sans-serif;
+
+/* z-index */
+$z0: 0;
+$z1: 9;
+$z2: 99;
+$z3: 999;
+$z4: 9999;

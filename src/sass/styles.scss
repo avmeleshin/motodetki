@@ -1,0 +1,466 @@
+@import 'variables';
+
+.wrapper {
+	&.ndx {
+		background: url(img/bg.jpg);
+	}
+}
+
+.ndx {
+	header {
+		height: 850px;
+		background-image: url(img/bg-top.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	main {
+		margin-top: 220px;
+	}
+}
+
+.menu-section {
+	margin-top: 80px;
+}
+
+.main-item {
+	background-color: $color5;
+	box-shadow: 0 2px 6px $shadow-color;
+	padding: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.mi-img {
+	img {
+		width: 100%;
+	}
+}
+
+.mi-header {
+	text-transform: uppercase;
+	font-family: $font-bold;
+	font-size: 1.4em;
+	color: $color2;
+	margin-top: 20px;
+	font-size: 1.6em;
+}
+
+.mi-descr {
+	margin-top: 30px;
+	font-size: 1.4em;
+}
+
+.mi-btn {
+	position: relative;
+	margin: 30px 0;
+}
+
+.btn {
+	display: inline-block;
+	background: $color-gstart; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color-gstart 0%, $color-gend 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $color-gstart 0%, $color-gend 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $color-gstart 0%, $color-gend 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-gstart', endColorstr='$color-gend',GradientType=0 ); /* IE6-9 */
+	border-radius: 3px;
+	img {
+		padding: 7px 20px;
+	}
+}
+
+/* Контент */
+.content-logo {
+	text-align: center;
+	img {
+		width: 250px;
+	}
+}
+
+.content-wrapper {
+	border: 1px solid $color-bd;
+	border-radius: 3px;
+	padding: 45px 50px;
+	margin-bottom: 20px;
+	&.ndx {
+		text-align: center;
+		font-size: 1.4em;
+		border: none;
+		.content-text {
+			margin-top: 45px;
+			p {
+				font-family: $font-light;
+				font-size: 1.2em;
+				color: $color1;
+				margin: 0;				
+			}
+		}
+	}
+}
+
+.content-text {
+	color: $color2;
+	h1 {
+		font-family: $font-bold;
+		font-size: 4em;
+		text-align-last: auto;
+		font-weight: normal;
+		margin-bottom: 40px;
+	}
+	h3 {
+		font-family: $font-medium;
+		font-size: 1.5em;
+	}
+	p {
+		font-size: 1.05em;
+		font-family: $font-light-r;
+	}
+	.youtube-video {
+		text-align: center;
+	}
+}
+
+/* Каталог */
+.content-header {
+	border: 1px solid $color-bd;
+	border-radius: 3px;
+	padding: 30px;
+}
+
+.content-header-img {
+	img {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+.content-header-text {
+	h1 {
+		font-family: $font-a;
+		font-size: 3.5em;
+		color: $color2;
+	}
+	p {
+		font-size: 1.05em;
+		font-family: $font-light-r;
+		color: $color6;
+	}
+}
+
+.catalog-items {
+	margin-top: 20px;
+}
+
+.catalog-item {
+	padding: 15px 15px 25px;
+	text-align: center;
+	transition: all ease .5s;
+	border: 1px solid $color5;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	height: 390px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&:hover {
+		border-color: $color-bd1;
+		.ci-img {
+			img {
+				filter: grayscale(0%);
+			}
+		}
+		.ci-name {
+			color: $color1;
+		}
+		.ci-price {
+			color: $color2;
+		}
+	}
+}
+
+.ci-img {
+	height: 160px;
+	img {
+		height: 100%;
+		filter: grayscale(100%) opacity(50%);
+		transition: all ease .5s;
+		&:hover {
+			filter: grayscale(0%);
+		}
+	}
+}
+
+.ci-name {
+	font-family: $font-bold;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	color: $color2;
+	transition: all ease .5s;
+}
+
+.ci-price {
+	font-family: $font-thin;
+	font-size: 2.55em;
+	color: $color1;
+	transition: all ease .5s;
+	i {
+		font-size: .7em;
+	}
+}
+
+.cat {
+	.menu-section {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
+
+/* Продукция */
+.product-wrapper {
+	border-radius: 3px;
+	background-image: url(img/bg-product.jpg);
+	background-size: cover;
+	margin: 20px 0;
+	padding: 50px 60px;
+}
+
+.product-img {
+	img {
+		border-radius: 3px;
+		box-shadow: 2px 0 6px $shadow-color;
+		width: 100%;
+	}
+}
+
+.product-text {
+	background-color: $color5;
+	border-radius: 3px;
+	box-shadow: 2px 0 6px $shadow-color;
+	padding: 30px 40px;
+	font-family: $font-light;
+	font-size: 1.2em;
+	h2 {
+		color: $color2;
+		font-size: 2em;
+		font-family: $font-bold;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+}
+
+.img-logo {
+	text-align: center;
+	margin-top: 40px;
+}
+
+/* Подвал сайта */
+footer {
+	background-color: $color3;
+	padding: 70px 0 160px;
+}
+
+.footer-logo {
+	text-align: center;
+}
+
+.footer-slogan {
+	color: $color5;
+	margin-top: 40px;
+	font-size: 1.2em;
+}
+
+.orange {
+	color: $color4;
+}
+
+.footer-menu {
+	font-size: 1.2em;
+	h4 {
+		text-transform: uppercase;
+		color: $color5;
+		font-size: 1.4em;
+	}
+	ul {
+		margin: 30px 0 40px;
+	}
+	li {
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+	}
+	a {
+		color: $color1;
+		font-size: 1.2em;
+		&:hover,
+		&:focus,
+		&:active {
+			color:$color4
+		}
+	}
+}
+
+.footer-contact {
+	li {
+		display: flex;
+	}
+	span {
+		&:first-child {
+			margin-right: 5px;
+		}
+		&:last-child {
+			color: $color5;
+		}
+	}
+}
+
+.footer-social {
+	display: flex;
+	a {
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.content-logo {
+		img {
+			width: 200px;
+		}
+	}
+
+	.ndx {
+		main {
+			margin-top: 710px;
+		}
+	}
+
+	.home-section {
+		margin-top: 25px;
+	}
+
+	.main-item {
+		margin-bottom: 25px;
+	}
+
+	.content-text {
+		h1 {
+			font-size: 3em;
+		}
+		h3 {
+			font-size: 1.4em;
+		}
+	}
+
+	.product-text {
+		margin-top: 20px;
+	}
+
+	footer {
+		padding-bottom: 100px;
+	}
+
+	.footer-item {
+		height: 270px;
+		text-align: center;
+		&.first {
+			margin: 0;
+		}
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.menu-section {
+		margin-top: 50px;
+	}
+
+	.content-wrapper {
+		padding-left: 10px;
+		padding-right: 10px;
+		&.ndx {
+			.content-text {
+				p {
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+
+	.content-text {
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 1.2em;
+		}
+	}
+
+	.content-logo {
+		img {
+			width: 150px;
+		}
+	}
+
+	.footer-item {
+		height: auto;
+	}
+
+	.footer-contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-item.first {
+		margin-bottom: 40px;
+	}
+
+	.footer-menu {
+		ul {
+			margin: 15px 0 20px;
+		}
+	}
+
+	.footer-social {
+		justify-content: center;
+	}
+
+	footer {
+		padding-bottom: 50px;
+	}
+
+	.ndx {
+		main {
+			margin-top: 1750px;
+		}
+	}
+
+	.product-wrapper {
+		padding: 10px;
+	}
+
+	.product-text {
+		padding: 10px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px) {
+
+}

@@ -1,0 +1,326 @@
+@import 'variables';
+
+body {
+	background-color: $color5;
+	font-family: $font-light;
+	font-size: 1.2em;
+	color: $color1;
+	min-width: 320px;
+}
+
+a {
+	color: $color3;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color4;
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-family: $font-bold;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+/* Верхний логотип */
+.top-logo {
+	text-align: center;
+	margin-top: 25px;
+	img {
+		width: 250px;
+	}
+}
+
+/* Верхнее меню */
+.top-nav {
+	margin-top: 40px;
+	margin-bottom: 45px;
+	position: relative;
+}
+
+.top-menu {
+	display: flex;
+	justify-content: space-between;
+	&>li {
+		transition: background-color ease .5s;
+		//margin: 0 10px;
+		//padding-top: 10px;
+		&:first-child {
+		//	margin-left: 0;
+		}
+		&:last-child {
+		//	margin-right: 0;
+		}
+		&.active {
+			&>a {
+				padding: 2px 0;
+				font-family: $font-bold;
+				color: $color4;
+				border-bottom: 2px solid $color4;
+			}
+		}
+	}
+	a {
+		font-family: $font-bold;
+		font-size: 1.4em;
+		text-transform: uppercase;
+		transition: all ease .5s;
+		line-height: 3em;
+	}
+}
+
+li.selected {
+	position: relative;
+}
+
+ul {
+	&.submenu {
+		padding: 15px;
+		margin-left: -15px;
+		background-color: $color5;
+		box-sizing: border-box;
+		border: 1px solid $color-bd;
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		z-index: 99;
+		//padding-top: 30px;
+		li {
+			margin: 0;
+			text-transform: uppercase;
+			line-height: 2.3em;
+			&:hover {
+				a {
+					color: $color4;
+				}
+			}
+			a {
+				line-height: 2em;
+				color: $color2;
+				text-decoration: none;
+			}
+		}
+		&.open {
+			z-index: 999;
+		}
+	}
+}
+
+.top-toggle-menu {
+	display: none;
+	font-size: 4em;
+	color: $color2;
+	cursor: pointer;
+	padding: 0 10px;
+}
+
+/* Акция */
+.stock-contact {
+	margin-top: 25px;
+}
+
+.stock {
+	font-family: $font-a;
+	color: $color2;
+	padding-left: 30px;
+	padding-right: 170px;
+}
+
+.stock-topline {
+	font-size: 4.1em;
+}
+
+.stock-bottomline {
+	font-size: 3em;
+}
+
+.stock-conditions {
+	font-family: $font-light;
+	font-size: 1.6em;
+	color: $color3;
+	margin-top: 35px;
+	text-align: justify;
+}
+
+.stock-conditions-line {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Контакты вверху страницы */
+.top-contact {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.tc-phone,
+.tc-email {
+	font-family: $font-bold;
+	color: $color2;
+}
+
+.tc-phone {
+	font-size: 3em;
+}
+
+.tc-phone_descr {
+	font-family: $font-light;
+	font-size: 1.5em;
+}
+
+.tc-email {
+	font-size: 1.5em;
+	margin-top: 10px;
+}
+
+.tc-address {
+	font-family: $font-light;
+	font-size: 1.4em;
+	color: $color3;
+	margin-top: 15px;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+	.stock {
+		padding-left: 15px;
+		padding-right: 115px;
+	}
+	
+	.stock-topline {
+		font-size: 3.6em;
+	}
+
+	.stock-bottomline,
+	.tc-phone {
+		font-size: 2.7em;
+	}
+
+	.stock-conditions,
+	.tc-address {
+		font-size: 1.2em;
+	}
+
+	.tc-email {
+		font-size: 1.4em;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.top-logo {
+		img {
+			width: 200px;
+		}
+	}
+
+	.top-nav {
+		margin: 25px 0 35px;
+	}
+
+	.top-toggle-menu {
+		display: inline-block;
+	}
+
+	.top-menu {
+		display: none;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		position: absolute;
+		background-color: $color1;
+		display: inline-block;
+		left: 0;
+		top: 68px;
+		z-index: $z2;
+		width: 100%;
+		li {
+			padding: 10px;
+			&:first-child {
+				padding-left: 10px;
+			}
+			&:last-child {
+				padding-right: 10px;
+			}
+			&:hover {
+				background-color: $color2;
+			}
+		}
+	}
+
+	.stock {
+		padding-left: 5px;
+		padding-right: 75px;
+	}
+	
+	.stock-topline {
+		font-size: 2.9em;
+	}
+
+	.stock-bottomline,
+	.tc-phone {
+		font-size: 2.2em;
+	}
+
+	.stock-conditions,
+	.tc-address {
+		font-size: 1.1em;
+	}
+
+	.tc-email {
+		font-size: 1.2em;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.top-nav {
+		margin: 15px 0 25px;
+	}
+
+	.stock {
+		text-align: center;
+		width: 95%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.top-contact {
+		width: 95%;
+		text-align: center;
+		margin-top: 40px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+	.stock-topline {
+		font-size: 2.5em;
+	}
+
+	.stock-bottomline,
+	.tc-phone {
+		font-size: 1.9em;
+	}
+
+	.stock-conditions,
+	.tc-address {
+		margin-top: 25px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px) {
+
+}

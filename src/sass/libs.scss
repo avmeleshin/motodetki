@@ -1,0 +1,10 @@
+/* Bootstrap */
+@import 'bootstrap.scss';
+
+/* FontAwesome */
+$fa-font-path: 'fonts/Awesome';
+@import '../libs/components-font-awesome/scss/variables';
+@import '../libs/components-font-awesome/scss/mixins';
+@import '../libs/components-font-awesome/scss/path';
+@import '../libs/components-font-awesome/scss/core';
+@import '../libs/components-font-awesome/scss/icons';
