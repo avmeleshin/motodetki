@@ -1,5 +1,8 @@
 <!--[if lt IE 9]>
-	<script src="./js/iesupp.min.js"></script>
+	<script src="./js/es5-shim.min.js"></script>
+	<script src="./js/html5shiv.min.js"></script>
+	<script src="./js/html5shiv-printshiv.min.js"></script>
+	<script src="./js/respond.min.js"></script>
 <![endif]-->
 
 <!-- load CSS -->
@@ -15,6 +18,44 @@
 </script>
 
 <!-- Load Scripts -->
+
+<!-- Карта GOOGLE -->
+<script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8WxBaLExM6sB5yhLJ0mL3UfFARfv5-zI&language=ru&callback=initMap"></script>
+<script>
+	/* Карта  GOOGLE */
+	var map1;
+	var map2;
+	function initMap() {
+		var myCenter1 = {lat: 59.995093, lng: 30.146882};
+		var myPoint1  = {lat: 59.993933, lng: 30.147661};
+		var myCenter2 = {lat: 59.731495, lng: 30.066142};
+		var myPoint2  = {lat: 59.730300, lng: 30.066131};
+
+		var map1 = new google.maps.Map(document.getElementById('map-shop'), {
+			zoom: 16,
+			center: myCenter1,
+			disableDefaultUI: true
+		});
+
+		var map2 = new google.maps.Map(document.getElementById('map-office'), {
+			zoom: 16,
+			center: myCenter2,
+			disableDefaultUI: true
+		});
+
+		var point1 = new google.maps.Marker({
+			position: myPoint1,
+			map: map1,
+			title: 'Магазин Мотодетки'
+		});
+
+		var point2 = new google.maps.Marker({
+			position: myPoint2,
+			map: map2,
+			title: 'Офис Мотодетки'
+		});
+	};
+</script>
 
 <script>var scr = {"scripts":[
 	{"src" : "./js/libs.min.js", "async" : false},

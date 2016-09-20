@@ -64,6 +64,7 @@ $(document).ready(function() {
 /*	if (($(window).width() <= '992') && ($(window).width() >= '768')) {
 		setEqualHeight($('.footer-item'));
 	};*/
+
 });
 
 $(window).resize(function() {
