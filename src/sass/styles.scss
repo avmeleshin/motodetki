@@ -433,6 +433,44 @@ footer {
 	text-align: center;
 }
 
+/* Отзывы */
+
+.reviews-list {
+	margin-top: 20px;
+}
+
+.reviews-item {
+	display: flex;
+	border-top: 1px solid $color3;
+	padding: 20px 0;
+}
+
+.reviews-img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 10px;
+	img {
+		width: 100%;
+	}
+}
+
+.reviews-block {
+	width: 80%;
+}
+
+.reviews-autors {
+	font-family: $font-bold;
+	margin-bottom: 10px;
+}
+
+.reviews-data {
+	font-family: $font-light;
+}
+
+/* Отзывы */
+
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
